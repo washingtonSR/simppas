@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui"  >
+<h:head>
+</h:head>
+<h:body>
+	<h:panelGrid id="panel" columns="1" border="1" 
+	cellpadding="10" cellspacing="1">
+      <h:form>
+	       <p:panel header="Inserir">
+	           nome: <h:inputText value="#{artigoController.nome}"/>
+	           link: <h:inputText value="#{artigoController.link}"/>
+	           Autor: <h:inputText value="#{artigoController.autor}" />
+	           <h:commandButton action="#{artigoController.adicionarArtigo}" 
+	           value="Inserir" style="margin-left:15px"/>
+	       </p:panel>
+      </h:form>
+     
+      <h:form> 
+           <p:dataTable value="#{artigoController.listaArtigos}" var="o">
+           	<p:column>
+   				<!-- column header -->
+   				<f:facet name="header">ID</f:facet>
+   				<!-- row record -->
+   				#{o.id}
+   			</p:column>
+   			<p:column>
+   				<!-- column header -->
+   				<f:facet name="header">NOME</f:facet>
+   				<!-- row record -->
+   				#{o.nome}
+   			</p:column>
+   			<p:column>
+   				<!-- column header -->
+   				<f:facet name="header">LINK</f:facet>
+   				<!-- row record -->
+   				#{o.link}
+   			</p:column>
+   			<p:column>
+   				<!-- column header -->
+   				<f:facet name="header">AUTOR</f:facet>
+   				<!-- row record -->
+   				#{o.autor}
+   			</p:column>
+           </p:dataTable>
+       </h:form>
+     </h:panelGrid>
+</h:body>
+</html>

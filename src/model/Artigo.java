@@ -22,13 +22,13 @@ public class Artigo implements Serializable{
 	@Column(name = "id")
 	private int id;
 	
-	@Column(name = "nome", length = 50, nullable = true)
+	@Column(name = "nome", length = 200, nullable = true)
 	private String nome;
 	
-	@Column(name = "link", length = 50, nullable = true)
+	@Column(name = "link", length = 200, nullable = true)
 	private String link;
 	
-	@Column(name = "autor", length = 50, nullable = true)
+	@Column(name = "autor", length = 200, nullable = true)
 	
 	private String autor;
 	

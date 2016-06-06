@@ -23,11 +23,6 @@ public class ArtigoController {
 		listaArtigos = new ListDataModel(lista);
 		return listaArtigos;
 	}
-	
-	public String prepararAdicionarArtigo(){
-		Artigo artigo = new Artigo(nome,link,autor);
-		return "gerenciarArtigo";
-	}
 	/*
 	public String prepararAlterarArtigo(){
 		artigo = (Artigo)(listaArtigos.getRowData());
@@ -48,11 +43,11 @@ public class ArtigoController {
 		dao.save(artigo);
 	}
 	
-	public String alterarArtigo(){
+	public void alterarArtigo(){
 		Artigo artigo = new Artigo(nome,link,autor);
 		ArtigoDao dao = new ArtigoDaoImp();
 		dao.update(artigo);
-		return "index";
+		return;
 	}
 	
 	//Gets and Setters

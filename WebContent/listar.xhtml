@@ -10,35 +10,33 @@
 </h:head>
 <h:body>
 	<h1>Listar Artigos</h1>
-        <h:form id="lista"> 
-            <f:view>
+        <h:form> 
             <p:dataTable value="#{artigoController.listaArtigos}" var="o">
-            	<h:column>
+            	<p:column>
     				<!-- column header -->
     				<f:facet name="header">ID</f:facet>
     				<!-- row record -->
     				#{o.id}
-    			</h:column>
-    			<h:column>
+    			</p:column>
+    			<p:column>
     				<!-- column header -->
     				<f:facet name="header">NOME</f:facet>
     				<!-- row record -->
     				#{o.nome}
-    			</h:column>
-    			<h:column>
+    			</p:column>
+    			<p:column>
     				<!-- column header -->
     				<f:facet name="header">LINK</f:facet>
     				<!-- row record -->
     				#{o.link}
-    			</h:column>
-    			<h:column>
+    			</p:column>
+    			<p:column>
     				<!-- column header -->
     				<f:facet name="header">AUTOR</f:facet>
     				<!-- row record -->
     				#{o.autor}
-    			</h:column>
+    			</p:column>
             </p:dataTable>
-            </f:view>
         </h:form>
 </h:body>
 </html>
