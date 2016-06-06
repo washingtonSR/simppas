@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui"  >
+<h:head>
+</h:head>
+<h:body>
+	<h1>Gerenciador de Artigos</h1>
+        <h:form>
+	        <p:panel header="Inserir" style="width:50%">
+	            nome: <h:inputText value="#{artigoController.nome}"/><br/>
+	            link: <h:inputText value="#{artigoController.link}"/><br/>
+	            Autor: <h:selectOneMenu value="#{artigoController.autor}">
+	                <f:selectItem itemLabel="washi" itemValue="washi"/>
+	                <f:selectItem itemLabel="fofo" itemValue="fofo"/>
+	                <f:selectItem itemLabel="lary" itemValue="Lary"/>
+	            </h:selectOneMenu><br/>
+	            <h:commandButton action="#{artigoController.adicionarArtigo}" value="Inserir Novo Artigo"/>
+	            <h:commandButton action="#{livroController.alterarArtigo}" value="Alterar Artigo"/>
+	            <br/>
+	            <h:commandLink action="index" value="Voltar"/>
+	        </p:panel>
+        </h:form>
+</h:body>
+</html>
