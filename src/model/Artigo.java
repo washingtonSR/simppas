@@ -29,8 +29,15 @@ public class Artigo implements Serializable{
 	private String link;
 	
 	@Column(name = "autor", length = 50, nullable = true)
+	
 	private String autor;
 	
+	
+	
+	public Artigo() {
+		super();
+	}
+
 	public Artigo(String nome, String link,String autor){
 		this.nome=nome;
 		this.link=link;

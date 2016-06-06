@@ -18,7 +18,7 @@ public class ArtigoController {
 	private String autor;
 	private DataModel listaArtigos;
 
-	public DataModel getListarArtigos() {
+	public DataModel getListaArtigos() {
 		List<Artigo> lista = new ArtigoDaoImp().list();
 		listaArtigos = new ListDataModel(lista);
 		return listaArtigos;
@@ -54,16 +54,8 @@ public class ArtigoController {
 		dao.update(artigo);
 		return "index";
 	}
-
-	public DataModel getListaArtigos() {
-		return listaArtigos;
-	}
-
-	public void setListaArtigos(DataModel listaArtigos) {
-		this.listaArtigos = listaArtigos;
-	}
-	//Gets e Setters
-
+	
+	//Gets and Setters
 	public String getNome() {
 		return nome;
 	}
@@ -87,4 +79,9 @@ public class ArtigoController {
 	public void setAutor(String autor) {
 		this.autor = autor;
 	}
+
+	public void setListaArtigos(DataModel listaArtigos) {
+		this.listaArtigos = listaArtigos;
+	}
+	
 }

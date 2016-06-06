@@ -26,7 +26,7 @@ public class ArtigoDaoImp implements ArtigoDao {
 	public List<Artigo> list() {
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		Transaction t = session.beginTransaction();
-		List lista = session.createQuery("from artigo").list();
+		List lista = session.createQuery("from Artigo").list();
 		t.commit();
 		return lista;
 	}
