@@ -1,6 +1,6 @@
 package dao;
 
-import model.Artigo;
+import model.Evento;
 
 import java.util.List;
 
@@ -9,38 +9,38 @@ import org.hibernate.Transaction;
 
 import utils.HibernateUtil;
 
-public class ArtigoDaoImp implements ArtigoDao {
-	public void save(Artigo artigo) {
+public class EventoDaoImp implements EventoDao {
+	public void save(Evento evento) {
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		Transaction t = session.beginTransaction();
-		session.save(artigo);
+		session.save(evento);
 		t.commit();
 	}
 	
-	public Artigo getArtigo(long id) {
+	public Evento getEvento(long id) {
 		Session session = HibernateUtil.getSessionFactory().openSession();
-		return (Artigo) session.load(Artigo.class, id);
+		return (Evento) session.load(Evento.class, id);
 	}
 	
-	public List<Artigo> list() {
+	public List<Evento> list() {
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		Transaction t = session.beginTransaction();
-		List lista = session.createQuery("from Artigo").list();
+		List lista = session.createQuery("from Evento").list();
 		t.commit();
 		return lista;
 	}
 	
-	public void remove(Artigo artigo) {
+	public void remove(Evento evento) {
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		Transaction t = session.beginTransaction();
-		session.delete(artigo);
+		session.delete(evento);
 		t.commit();
 	}
 	
-	public void update(Artigo artigo) {
+	public void update(Evento evento) {
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		Transaction t = session.beginTransaction();
-		session.update(artigo);
+		session.update(evento);
 		t.commit();
 	}
 }

@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui"  >
+<h:head>
+</h:head>
+<h:body>
+	<h1>Inserir Evento</h1>
+        <h:form>
+	        <p:panel header="Inserir" style="width:50%">
+	            nome: <h:inputText value="#{eventoController.nome}"/><br/>
+	            descricao: <h:inputText value="#{eventoController.descricao}"/><br/>
+	            data: <h:inputText value="#{eventoController.data}"/><br/>
+	            organizador: <h:inputText value="#{eventoController.organizador}"/><br/>
+	            <h:commandButton action="#{eventoController.adicionarEvento}" value="Inserir Novo Evento"/>
+	            <br/>
+	            <h:commandLink action="index" value="Voltar"/>
+	        </p:panel>
+        </h:form>
+</h:body>
+</html>
