@@ -12,8 +12,8 @@
 	<h1>Inserir Noticia</h1>
         <h:form>
 	        <p:panel header="Inserir" style="width:50%">
-	            titulo: <h:inputText value="#{noticiaController.nome}"/><br/>
-	            conteudo: <h:inputText value="#{noticiaController.descricao}"/><br/>
+	            titulo: <h:inputText value="#{noticiaController.titulo}"/><br/>
+	            conteudo: <h:inputText value="#{noticiaController.conteudo}"/><br/>
 	            data: <h:inputText value="#{noticiaController.data}"/><br/>
 	            <h:commandButton action="#{noticiaController.adicionarNoticia}" value="Inserir Nova noticia"/>
 	            <br/>
